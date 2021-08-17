@@ -19,6 +19,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -29,7 +30,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629183133118</updated>
-      <workItem from="1629183135418" duration="6507000" />
+      <workItem from="1629183135418" duration="6832000" />
     </task>
     <servers />
   </component>
@@ -52,6 +53,10 @@
     <state x="540" y="371" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1629191632702" />
     <state x="540" y="363" key="NewPhpFileDialog/0.25.1440.821@0.25.1440.821" timestamp="1629189355569" />
     <state x="540" y="363" key="NewPhpFileDialog/0.25.1440.822@0.25.1440.822" timestamp="1629183166533" />
+    <state x="229" y="86" key="SettingsEditor" timestamp="1629196127156">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1629196127156" />
     <state x="385" y="196" key="run.anything.popup" timestamp="1629183553140">
       <screen x="0" y="25" width="1440" height="822" />
     </state>

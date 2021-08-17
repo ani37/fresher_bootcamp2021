@@ -7,11 +7,11 @@
  * @return string
  * @author aniket
  */
-function maskNumber($data)
+function maskNumber($data, $start, $length)
 {
-    return substr_replace($data,"******",2,6);
+    return substr_replace($data,"******",$start, $length);
 }
 
 $input = "9876543210";
-$output = maskNumber($input);
+$output = maskNumber($input, 2, 6);
 print_r ($output);

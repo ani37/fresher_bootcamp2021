@@ -1,41 +1,87 @@
 <?php
+
 /**
- * Loop over json data
+ * get names of from json data
  * @param string $data The json string.
+ * @return array
  * @author aniket
  */
-function convert($data){
-
+function getNames($data){
     $names = [];
-    $ages = [];
-    $city = [];
+
     foreach($data["players"] as $player){
-        array_push($names,$player["name"]);
-        array_push($ages,$player["age"]);
-        array_push($city,$player["address"]);
+        array_push($names,  $player["name"]);
     }
 
-    echo "All names ,age and city into arrays each:\n";
-    print_r($names);
-    print_r($ages);
-    print_r($city);
+    return $names;
+}
 
-    echo "All unique names:\n";
-    $names = array_unique($names);
-    print_r($names);
+/**
+ * get ages of from json data
+ * @param string $data The json string.
+ * @return array
+ * @author aniket
+ */
+function getAges($data){
+    $ages = [];
 
-    echo "The name of Persons with max age:\n";
-    $maxValue = max($ages);
+    foreach($data["players"] as $player){
+        array_push($ages, $player["age"]);
+    }
+
+    return $ages;
+}
+
+/**
+ * get cities of from json data
+ * @param string $data The json string.
+ * @return array
+ * @author aniket
+ */
+function getCities($data){
+    $cities = [];
+
+    foreach($data["players"] as $player){
+        array_push($cities, $player["address"]);
+    }
+
+    return $cities;
+}
+
+/**
+ * get unique names
+ * @param string $data The json string.
+ * @return array
+ * @author aniket
+ */
+function getUniqueNames($data){
+    return array_unique(getNames($data));
+}
+
+/**
+ * get max aged person names from json data
+ * @param string $data The json string.
+ * @return array
+ * @author aniket
+ */
+function getMaxAgesPersons($data){
+    $maxValue = max(getAges($data));
+
     $maxAgesPersons = [];
     foreach($data["players"] as $player){
         if($player["age"] == $maxValue){
             array_push($maxAgesPersons, $player["name"]);
         }
     }
-
-    print_r($maxAgesPersons);
+    return $maxAgesPersons;
 }
 
 $json = "{\"players\":[{\"name\":\"Ganguly\",\"age\":45,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Dravid\",\"age\":45,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Dhoni\",\"age\":37,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Virat\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Jadeja\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Jadeja\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}}]}";
 $obj = json_decode($json, true);
-convert($obj);
+
+print_r(getNames($obj));
+print_r(getAges($obj));
+print_r(getCities($obj));
+print_r(getUniqueNames($obj));
+print_r(getMaxAgesPersons($obj));
+

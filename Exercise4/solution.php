@@ -1,6 +1,9 @@
 <?php
-
-
+/**
+ * Loop over json data
+ * @param string $data The json string.
+ * @author aniket
+ */
 function convert($data){
 
     $names = [];
@@ -32,10 +35,6 @@ function convert($data){
 
     print_r($maxAgesPersons);
 }
-
-
-
-
 
 $json = "{\"players\":[{\"name\":\"Ganguly\",\"age\":45,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Dravid\",\"age\":45,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Dhoni\",\"age\":37,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Virat\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Jadeja\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}},{\"name\":\"Jadeja\",\"age\":35,\"address\":{\"city\":\"Hyderabad\"}}]}";
 $obj = json_decode($json, true);

@@ -2,7 +2,7 @@
 
 
 /**
- * Convert a multi-dimensional array into a single-dimensional array.
+ * Convert a phone number into a masked phone number.
  * @param string $data The phone number string.
  * @return string
  * @author aniket

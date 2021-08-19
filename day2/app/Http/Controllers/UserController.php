@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
 
-    public function index()
+    public function getAllUsers()
     {
         $user = User::get()->toJson(JSON_PRETTY_PRINT);
         return response($user, 200);
     }
 
-    public function show($id)
+    public function getUsersById($id)
     {
         if (User::where('id', $id)->exists()) {
             $user = User::where('id', $id)->get()->toJson(JSON_PRETTY_PRINT);
@@ -27,7 +27,7 @@ class UserController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function addUser(Request $request)
     {
         $user = new User;
         $user->firstname = $request->firstname;
@@ -41,7 +41,7 @@ class UserController extends Controller
         ], 201);
     }
 
-    public function delete( $id)
+    public function removeUser($id)
     {
         if(User::where('id', $id)->exists()) {
             $user = User::find($id);

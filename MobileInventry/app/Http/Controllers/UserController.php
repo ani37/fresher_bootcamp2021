@@ -94,6 +94,9 @@ class UserController extends Controller
     public function getAllUsers(): JsonResponse
     {
         $users = $this->userService->getAllUsers();
+        if($users == null){
+            return response()->json(['message' => "User not found"], 404);
+        }
         return response()->Json($users);
     }
 
